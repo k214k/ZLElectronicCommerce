@@ -1,0 +1,19 @@
+//
+//  ZLECommerce.pch
+//  ZLElectronicCommerce
+//
+//  Created by zhangliang on 16/3/3.
+//  Copyright © 2016年 zhangl. All rights reserved.
+//
+
+#ifndef ZLECommerce_pch
+#define ZLECommerce_pch
+#import "UIView+XYViewFrame.h"
+#import "FoundationHeader.h"
+#import "Constant.h"
+#import "XYBaseDelegateHeader.h"
+#import "XYBaseModelHeader.h"
+#import "XYBaseViewHeader.h"
+#import "XYBaseDelegateHeader.h"
+#import "XYBaseViewControllerHeader.h"
+#endif /* ZLECommerce_pch */

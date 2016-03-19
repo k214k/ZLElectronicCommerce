@@ -1,0 +1,7 @@
+
+pod 'AFNetworking'
+pod 'FMDB'
+pod 'MBProgressHUD'
+pod 'Masonry'
+pod 'SDWebImage'
+
