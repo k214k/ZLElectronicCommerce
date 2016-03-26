@@ -20,28 +20,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _tabview = [[UITableView alloc] initWithFrame:CGRectMake(0,0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
-    _tabview.delegate = self;
-    _tabview.dataSource = self;
-    [self.view addSubview:_tabview];
-    
-    //WithFrame:CGRectMake(0, -kScreenHeight, kScreenWidth, kScreenHeight)
-    _pullScrollView = [[PullScrollView alloc] init];
-    _pullScrollView.scrollView = _tabview;
-    [_pullScrollView header];
-    WEAKSELF
-    _pullScrollView.refreshBlock = ^(){
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            sleep(2);
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-        sum = 5;
-         [weakSelf.pullScrollView endRefresh];
-        [weakSelf.tabview reloadData];
-        });
-        });
-    };
-    [_pullScrollView beginRefresh];
+    XYPanicBuyView* v= [[XYPanicBuyView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
+    [self.view addSubview:v];
+//    _tabview = [[UITableView alloc] initWithFrame:CGRectMake(0,0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
+//    _tabview.delegate = self;
+//    _tabview.dataSource = self;
+//    [self.view addSubview:_tabview];
+//    
+//    //WithFrame:CGRectMake(0, -kScreenHeight, kScreenWidth, kScreenHeight)
+//    _pullScrollView = [[PullScrollView alloc] init];
+//    _pullScrollView.scrollView = _tabview;
+//    [_pullScrollView header];
+//    WEAKSELF
+//    _pullScrollView.refreshBlock = ^(){
+//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//            sleep(2);
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//        sum = 5;
+//         [weakSelf.pullScrollView endRefresh];
+//        [weakSelf.tabview reloadData];
+//        });
+//        });
+//    };
+//    [_pullScrollView beginRefresh];
     //[_tabview addSubview:_pullScrollView];
 //    XYHomeTopView* v= [[XYHomeTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 200)];
 //    [v imageStrArray];

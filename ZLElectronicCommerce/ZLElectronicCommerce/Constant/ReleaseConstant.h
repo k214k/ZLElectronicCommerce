@@ -26,4 +26,12 @@ __REF = nil;\
 }\
 }
 
+#define XY_RELEASE_TIME_SAFELY(__REF)\
+{\
+if(__REF)\
+{\
+ [__REF invalidate];\
+ __REF = nil;\
+}\
+}
 #endif /* ReleaseConstant_h */

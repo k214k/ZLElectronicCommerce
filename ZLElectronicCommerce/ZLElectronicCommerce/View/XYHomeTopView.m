@@ -158,8 +158,7 @@ KPropertyAssign NSInteger selectIndex;
 {
     if (_timer)
     {
-        [_timer invalidate];
-        XY_RELEASE_SAFELY(_timer);
+        XY_RELEASE_TIME_SAFELY(_timer);
     }
 }
 

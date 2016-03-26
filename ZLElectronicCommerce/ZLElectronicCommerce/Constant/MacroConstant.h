@@ -14,5 +14,7 @@
 #define kScreenHeight  [[UIScreen mainScreen] bounds].size.height
 #define KPropertyStrong    @property (nonatomic, strong)
 #define KPropertyWeak      @property (nonatomic, weak)
-#define KPropertyAssign      @property (nonatomic, assign)
+#define KPropertyAssign    @property (nonatomic, assign)
+#define KPropertyCopyRead  @property (nonatomic,copy,readonly)
+#define KPropertyCopy      @property (nonatomic,copy)
 #endif /* MacroConstant_h */

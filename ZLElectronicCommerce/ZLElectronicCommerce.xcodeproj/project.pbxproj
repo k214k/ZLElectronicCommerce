@@ -35,6 +35,8 @@
 		C61FB7F21C89CCFC00C4CF94 /* XYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C61FB7F11C89CCFC00C4CF94 /* XYHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C61FB7F61C89CD6900C4CF94 /* XYHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C61FB7F51C89CD6900C4CF94 /* XYHomeTopView.m */; settings = {ASSET_TAGS = (); }; };
 		C61FB7FB1C89D02F00C4CF94 /* XYHomeTopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C61FB7FA1C89D02F00C4CF94 /* XYHomeTopModel.m */; settings = {ASSET_TAGS = (); }; };
+		C634F6761C9D81FA00291B66 /* XYPanicBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C634F6751C9D81FA00291B66 /* XYPanicBuyView.m */; settings = {ASSET_TAGS = (); }; };
+		C634F6791C9D8B4C00291B66 /* XYTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C634F6781C9D8B4C00291B66 /* XYTimeView.m */; settings = {ASSET_TAGS = (); }; };
 		C65C23481C887F7300DCBAE8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C23471C887F7300DCBAE8 /* main.m */; };
 		C65C234B1C887F7300DCBAE8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C234A1C887F7300DCBAE8 /* AppDelegate.m */; };
 		C65C234E1C887F7300DCBAE8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65C234D1C887F7300DCBAE8 /* ViewController.m */; };
@@ -104,6 +106,10 @@
 		C61FB7F91C89D02F00C4CF94 /* XYHomeTopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYHomeTopModel.h; sourceTree = "<group>"; };
 		C61FB7FA1C89D02F00C4CF94 /* XYHomeTopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYHomeTopModel.m; sourceTree = "<group>"; };
 		C61FB7FC1C89D09A00C4CF94 /* XYBaseViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBaseViewHeader.h; sourceTree = "<group>"; };
+		C634F6741C9D81FA00291B66 /* XYPanicBuyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPanicBuyView.h; sourceTree = "<group>"; };
+		C634F6751C9D81FA00291B66 /* XYPanicBuyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPanicBuyView.m; sourceTree = "<group>"; };
+		C634F6771C9D8B4C00291B66 /* XYTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTimeView.h; sourceTree = "<group>"; };
+		C634F6781C9D8B4C00291B66 /* XYTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTimeView.m; sourceTree = "<group>"; };
 		C65C23431C887F7300DCBAE8 /* ZLElectronicCommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLElectronicCommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65C23471C887F7300DCBAE8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C65C23491C887F7300DCBAE8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -201,6 +207,10 @@
 		C608F5F71C954D8500DB0DD0 /* XYPanicbuyView */ = {
 			isa = PBXGroup;
 			children = (
+				C634F6741C9D81FA00291B66 /* XYPanicBuyView.h */,
+				C634F6751C9D81FA00291B66 /* XYPanicBuyView.m */,
+				C634F6771C9D8B4C00291B66 /* XYTimeView.h */,
+				C634F6781C9D8B4C00291B66 /* XYTimeView.m */,
 			);
 			name = XYPanicbuyView;
 			sourceTree = "<group>";
@@ -312,9 +322,25 @@
 			name = XYHomeTopModel;
 			sourceTree = "<group>";
 		};
+		C634F6731C9D80D600291B66 /* XY */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = XY;
+			sourceTree = "<group>";
+		};
+		C634F67A1C9D8EEC00291B66 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Control;
+			path = ZLElectronicCommerce/Control;
+			sourceTree = "<group>";
+		};
 		C65C233A1C887F7300DCBAE8 = {
 			isa = PBXGroup;
 			children = (
+				C634F67A1C9D8EEC00291B66 /* Control */,
 				C608F5F21C953FDF00DB0DD0 /* ThirdParty */,
 				C61FB7DE1C89CC3200C4CF94 /* Resource */,
 				C61FB7C71C89C3B000C4CF94 /* Foundation */,
@@ -402,6 +428,7 @@
 		C65C23621C887FF700DCBAE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C634F6731C9D80D600291B66 /* XY */,
 				C608F5F71C954D8500DB0DD0 /* XYPanicbuyView */,
 				C6008A451C8A96E80083852B /* XYGridView */,
 				C61FB7F31C89CD4900C4CF94 /* XYHomeTopView */,
@@ -576,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61FB7F61C89CD6900C4CF94 /* XYHomeTopView.m in Sources */,
+				C634F6761C9D81FA00291B66 /* XYPanicBuyView.m in Sources */,
 				C61FB7D61C89C3B000C4CF94 /* NSMutableDictionary+MutableDictionary.m in Sources */,
 				C61F8F531C92F2C100BF134B /* PullScrollView.m in Sources */,
 				C6008A541C8B118C0083852B /* XYGridCollectionViewFlowLayout.m in Sources */,
@@ -600,6 +628,7 @@
 				C61FB7D71C89C3B000C4CF94 /* NSString+String.m in Sources */,
 				C65C23481C887F7300DCBAE8 /* main.m in Sources */,
 				C6008A511C8B042F0083852B /* XYGridCollectionViewCell.m in Sources */,
+				C634F6791C9D8B4C00291B66 /* XYTimeView.m in Sources */,
 				C61FB7D91C89C3B000C4CF94 /* YYTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

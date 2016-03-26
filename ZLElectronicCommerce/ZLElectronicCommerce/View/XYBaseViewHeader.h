@@ -18,4 +18,7 @@
 #import "XYGridCollectViewFootView.h"
 #import "XYGridFootView.h"
 
+
+#import "XYPanicBuyView.h"
+#import "XYTimeView.h"
 #endif /* XYBaseModelHeader_h */
