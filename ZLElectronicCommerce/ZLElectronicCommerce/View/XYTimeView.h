@@ -7,7 +7,8 @@
 //
 
 #import "XYBaseView.h"
-
+typedef void(^UpdateTimeBlock)();
 @interface XYTimeView : XYBaseView
-KPropertyCopyRead NSString* timeStr;
+KPropertyCopy UpdateTimeBlock updateTimeBlock;
+-(instancetype)initWithFrame:(CGRect)frame timeStr:(NSString*)aTimeStr;
 @end

@@ -17,4 +17,11 @@
 #define KPropertyAssign    @property (nonatomic, assign)
 #define KPropertyCopyRead  @property (nonatomic,copy,readonly)
 #define KPropertyCopy      @property (nonatomic,copy)
+
+#define XYTimeViewLabelWidth  3
+#define XYTimeViewBorderWidth 1
+#define XYTimeViewBorderColor [UIColor redColor].CGColor
+#define XYTimeViewWidthLabel 25
+#define XYTimeViewHightLabel 18
+#define XYTimeViewFontLabel  [UIFont systemFontOfSize:16]
 #endif /* MacroConstant_h */

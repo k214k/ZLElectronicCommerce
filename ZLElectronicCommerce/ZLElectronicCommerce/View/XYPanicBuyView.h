@@ -9,5 +9,5 @@
 #import "XYBaseView.h"
 
 @interface XYPanicBuyView : XYBaseView
-
+KPropertyWeak id<XYPanicBuyViewDelegate> delegate;
 @end

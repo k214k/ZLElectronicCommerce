@@ -9,5 +9,5 @@
 #ifndef XYBaseDelegateHeader_h
 #define XYBaseDelegateHeader_h
 #import "XYHomeTopViewDelegate.h"
-
+#import "XYPanicBuyViewDelegate.h"
 #endif /* XYBaseDelegateHeader_h */

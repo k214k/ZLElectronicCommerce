@@ -132,6 +132,7 @@
 		C65C23701C8885B100DCBAE8 /* ReleaseConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseConstant.h; sourceTree = "<group>"; };
 		C65C23711C88863500DCBAE8 /* PrintConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintConstant.h; sourceTree = "<group>"; };
 		C65C23721C88869900DCBAE8 /* MacroConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroConstant.h; sourceTree = "<group>"; };
+		C68515171CA6D6B40021FD8E /* XYPanicBuyViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPanicBuyViewDelegate.h; sourceTree = "<group>"; };
 		C6E43F421C90584E00A845CD /* XYGridCollectViewFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYGridCollectViewFootView.h; sourceTree = "<group>"; };
 		C6E43F431C90584E00A845CD /* XYGridCollectViewFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYGridCollectViewFootView.m; sourceTree = "<group>"; };
 		C6FDA7CC1C91ABFC0083561A /* UIView+XYViewFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYViewFrame.h"; sourceTree = "<group>"; };
@@ -420,6 +421,7 @@
 			children = (
 				C6008A3E1C8A933E0083852B /* XYHomeTopViewDelegate.h */,
 				C6008A3F1C8A93D20083852B /* XYBaseDelegateHeader.h */,
+				C68515171CA6D6B40021FD8E /* XYPanicBuyViewDelegate.h */,
 			);
 			name = Protocol;
 			path = ZLElectronicCommerce/Protocol;

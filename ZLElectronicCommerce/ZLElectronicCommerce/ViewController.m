@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    XYPanicBuyView* v= [[XYPanicBuyView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
+    XYPanicBuyView* v= [[XYPanicBuyView alloc] initWithFrame:CGRectMake(0, 100, kScreenWidth, 100)];
     [self.view addSubview:v];
 //    _tabview = [[UITableView alloc] initWithFrame:CGRectMake(0,0, kScreenWidth, kScreenHeight) style:UITableViewStylePlain];
 //    _tabview.delegate = self;

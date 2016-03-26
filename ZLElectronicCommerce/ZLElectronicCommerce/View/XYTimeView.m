@@ -39,14 +39,19 @@ KPropertyStrong UILabel* secondDotLabel;
     }
     return _baseView;
 }
+
 -(UILabel*)hourLabel
 {
     if (!_hourLabel)
     {
-        _hourLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 20, 21)];
-        _hourLabel.text = @"12";
+        _hourLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, XYTimeViewWidthLabel, XYTimeViewHightLabel)];
+        _hourLabel.text = @"01";
+        _hourLabel.layer.cornerRadius = XYTimeViewLabelWidth;
+        _hourLabel.layer.masksToBounds = YES;
+        _hourLabel.layer.borderWidth = XYTimeViewBorderWidth;
+        _hourLabel.layer.borderColor = XYTimeViewBorderColor;
         _hourLabel.textAlignment = NSTextAlignmentCenter;
-        _hourLabel.font = [UIFont systemFontOfSize:12];
+        _hourLabel.font = XYTimeViewFontLabel;
     }
     return _hourLabel;
 }
@@ -54,11 +59,10 @@ KPropertyStrong UILabel* secondDotLabel;
 {
     if (!_firstDotLabel)
     {
-        _firstDotLabel = [[UILabel alloc] initWithFrame:CGRectMake(_hourLabel.right, 0, 5, 21)];
+        _firstDotLabel = [[UILabel alloc] initWithFrame:CGRectMake(_hourLabel.right, 0, 5, XYTimeViewHightLabel)];
         _firstDotLabel.text = @":";
-        _firstDotLabel.text = @"12";
         _firstDotLabel.textAlignment = NSTextAlignmentCenter;
-        _firstDotLabel.font = [UIFont systemFontOfSize:12];
+        _firstDotLabel.font = XYTimeViewFontLabel;
     }
     return _firstDotLabel;
 }
@@ -66,10 +70,14 @@ KPropertyStrong UILabel* secondDotLabel;
 {
     if (!_minLabel)
     {
-        _minLabel = [[UILabel alloc] initWithFrame:CGRectMake(_firstDotLabel.right, 0, 20, 21)];
-        _minLabel.text = @"12";
+        _minLabel = [[UILabel alloc] initWithFrame:CGRectMake(_firstDotLabel.right, 0, XYTimeViewWidthLabel, XYTimeViewHightLabel)];
+        _minLabel.text = @"01";
+        _minLabel.layer.cornerRadius = XYTimeViewLabelWidth;
+        _minLabel.layer.masksToBounds = YES;
+        _minLabel.layer.borderWidth = XYTimeViewBorderWidth;
+        _minLabel.layer.borderColor = XYTimeViewBorderColor;
         _minLabel.textAlignment = NSTextAlignmentCenter;
-        _minLabel.font = [UIFont systemFontOfSize:12];
+        _minLabel.font = XYTimeViewFontLabel;
     }
     return _minLabel;
 }
@@ -77,11 +85,10 @@ KPropertyStrong UILabel* secondDotLabel;
 {
     if (!_secondDotLabel)
     {
-        _secondDotLabel = [[UILabel alloc] initWithFrame:CGRectMake(_minLabel.right, 0, 5, 21)];
+        _secondDotLabel = [[UILabel alloc] initWithFrame:CGRectMake(_minLabel.right, 0, 5, XYTimeViewHightLabel)];
         _secondDotLabel.text = @":";
-        _secondDotLabel.text = @"12";
         _secondDotLabel.textAlignment = NSTextAlignmentCenter;
-        _secondDotLabel.font = [UIFont systemFontOfSize:12];
+        _secondDotLabel.font = XYTimeViewFontLabel;
     }
     return _secondDotLabel;
 }
@@ -89,10 +96,14 @@ KPropertyStrong UILabel* secondDotLabel;
 {
     if (!_secondLabel)
     {
-        _secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(_secondDotLabel.right, 0, 20, 21)];
+        _secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(_secondDotLabel.right, 0, XYTimeViewWidthLabel, XYTimeViewHightLabel)];
         _secondLabel.text = @"12";
+        _secondLabel.layer.cornerRadius = XYTimeViewLabelWidth;
+        _secondLabel.layer.masksToBounds = YES;
+        _secondLabel.layer.borderWidth = XYTimeViewBorderWidth;
+        _secondLabel.layer.borderColor = XYTimeViewBorderColor;
         _secondLabel.textAlignment = NSTextAlignmentCenter;
-        _secondLabel.font = [UIFont systemFontOfSize:12];
+        _secondLabel.font = XYTimeViewFontLabel;
     }
     return _secondLabel;
 }
@@ -124,6 +135,39 @@ KPropertyStrong UILabel* secondDotLabel;
 
 -(void)repeatTime
 {
-    
+    NSInteger second = [_secondLabel.text integerValue];
+    NSInteger min = [_minLabel.text integerValue];
+    NSInteger hour = [_hourLabel.text integerValue];
+    if ((min == 0)&&(hour == 0)&&(second == 0))
+    {
+        XY_RELEASE_TIME_SAFELY(_timer);
+        [self updateData];
+    }
+    else
+    {
+        second -= 1;
+        if (second < 0)
+        {
+            second = 59;
+            min -= 1;
+            if ((min < 0)&&(hour))
+            {
+                min = 59;
+                hour -= 1;
+            }
+        }
+    }
+
+    _secondLabel.text = [NSString stringWithFormat:@"%02ld",(long)second];
+    _minLabel.text = [NSString stringWithFormat:@"%02ld",(long)min];
+    _hourLabel.text = [NSString stringWithFormat:@"%02ld",(long)hour];
+}
+
+-(void)updateData
+{
+    if (_updateTimeBlock)
+    {
+        _updateTimeBlock();
+    }
 }
 @end
